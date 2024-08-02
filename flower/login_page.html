@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>login page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+        
+            
+            .section-hero {
+              width: 1500px;
+              height: auto;
+              
+              margin: 100px auto;
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+              text-align: center;
+              }
+            label{
+              font-size: 20px;
+
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="number"],
+            input[type="email"],
+            input[type="submit"] {
+              width: 100%;
+              font-size: 40px;
+              padding: 10px;
+              margin: 8px 0;
+              box-sizing: border-box;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+            input[type="submit"] {
+              background-color: #4CAF50;
+              font-size: xx-large;
+              color: white;
+              border: none;
+              cursor: pointer;
+            }
+            input[type="submit"]:hover {
+              background-color: #45a049;
+            }
+        </style>
+     </head>
+  <body>
+        
+      <!--Header section starts-->
+    <header>
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fas fa-bars"></label>
+      <a href="#" class="logo">Flower<span>AURA</span></a>
+      <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="learn_more.html">About</a>
+          <a href="shop.html">Products</a>
+          <a href="#review">Review</a>
+          <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="icons">
+          <a href="#" class="fas fa-search"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-route"></a>
+          <a href="login_page.html" class="fas fa-user"></a>
+
+          
+      </div>
+    </header>
+   <!--Header section ends-->
+
+        <!-- HERO SECTION STARTS FROM HERE  -->
+        <main>
+          <div class="main">
+            <div class="section-hero">
+              
+                <h1> <center> SIGN UP HERE </center></h1>
+                <form  method="post">
+                  <label for="fullname"><h3>Full Name</h3></label>
+                  <input type="text" id="fullname" name="fullname" required>
+              
+                  <label for="email"><h3>Email</h3></label>
+                  <input type="email" id="email" name="email" required>
+
+                  <label for=" Mobile Number"><h3>Mobile Number</h3></label>
+                  <input type="number" id="number" name="number" required>
+              
+                  <label for="username"><h3>Username</h3></label>
+                  <input type="text" id="username" name="username" required>
+              
+                  <label for="password"><h3>Password</h3></label>
+                  <input type="password" id="password" name="password" required>
+              
+                  <input type="submit" value="Sign Up">
+                </form>
+            </div>
+          </div>
+        </main>
+        <!-- HERO SECTION ENDS FROM HERE -->
+        
+        <script src="" async defer></script>
+  </body>
+</html>

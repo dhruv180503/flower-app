@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flowers_shop</title>
+     <!--Font awesome cdn link-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!--custom css file link-->
+     <link rel="stylesheet" href="style.css"> 
+
+    <style>
+      
+      body{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background-color: plum;
+        align-items: center;
+        background-size: cover;
+        height: 1000px;
+        background: url(bg.avif) no-repeat;
+        background-position:center;
+      }
+
+      .wrapper{
+        position: relative;
+        width: 400px;
+        height: 500px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba rgba(0, 0, 0, .5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /*transform: scale(0);*/
+        transition: height .2s ease;
+
+      }
+      /*.wrapper .active-popup{
+        transform: scale(1);
+      }*/
+
+      .wrapper .active{
+        height: 520px;
+      }
+     .wrapper .form-box {
+          width: 100%;
+          padding: 40px;
+      }
+
+      .wrapper .form-box.login {
+        transition: transform .18s ease;
+        transform: translateX(0);
+      }
+
+      .wrapper.active .form-box.login {
+         transition: none;
+         transform: translateX(-400px);
+      }
+
+      .wrapper .form-box.register {
+        position: absolute;
+        transition: none;
+        transform: translateX(400px);
+      }
+
+      .wrapper.active .form-box.register {
+        transition: transform .18s ease;
+        transform: translateX(0);
+      }
+      .wrapper .icon-close{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background:#162938;
+      font-size: 2em;
+      color: #e1d4d4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 20px;
+      cursor: pointer;
+      z-index: 1;
+      }
+
+      .form-box h2{
+        font-size: 2rem;
+        color: black;
+        text-align: center;
+      }
+
+      .input-box{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border-bottom: 2px solid black ;
+        margin: 30px 0;
+      }
+
+      .input-box label{
+        position: absolute;
+        margin-top: 16px;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-25px);
+        font-size: 1.3rem;
+        color: #162938;
+        font-weight: 500;
+        pointer-events: none;
+        transition: .4s;
+      }
+
+      .input-box input:focus~label,
+      .input-box input:valid~label{
+        top: -5px;
+      }
+
+
+      .input-box input{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: black;
+        font-weight: 600;
+      }
+ 
+     .input-box .ic{
+      position: absolute;
+      right: 8px;
+      font-size: 1.2rem;
+      color: black;
+      line-height: 57px;
+     }
+
+     .remember-forgot{
+      font-size: 1.2em;
+      color: black;
+      font-weight: 500;
+      margin: -15px 0 15px;
+      display: flex;
+      justify-content: space-between;
+     }
+     .remember-forgot label input {
+      accent-color: #162938;
+      margin-right: 3px;
+     }
+ 
+     .remember-forgot a{
+      color: #270cf2;
+      text-decoration: none;
+     }
+
+     .remember-forgot a:hover {
+      text-decoration: underline;
+     }
+
+     .btn1{
+        width: 100%;
+        height: 45px; 
+         border-radius: 6px;
+         border: none;
+         outline:none;
+         background: #162938;
+         color: #fff;
+         cursor: pointer;
+         font-size: 2em;
+         }
+     .btn1:hover{
+         background: var(--pink);
+        }
+
+     .login-register{
+        font-size: 1.2em;
+        color: #162938;
+       text-align: center;
+       font-weight: 500;
+       margin: 25px 0 10px;
+      }
+      
+     .login-register p a{
+      color: #270cf2;
+      text-decoration: none;
+      font-weight: 600;
+     }
+
+     .login-register p a:hover{
+      text-decoration: underline;
+     }
+
+     
+    </style>
+  </head>
+
+  <body>
+
+    <!--Header section starts-->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">Flower<span>AURA</span></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="learn_more.html">About</a>
+            <a href="shop.html">Products</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-search" id="search-bn"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-route"></a>
+            <a href="ragister_page.html" class="fas fa-user"></a>
+        </div>
+
+        <form class="search-form">
+          <input type="search" id="search-box" placeholder="search here....">
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </header>
+    <script src="script.js"></script>
+     <!--Header section ends-->
+ 
+      <div class="wrapper">
+        <span class="icon-close">
+          <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+               <span class="ic"><ion-icon name="person"></ion-icon></span>
+               <input type="text"  required>
+               <label>UserName</label><br/>
+               
+            </div>
+        
+            <!--<div class="input-box">
+               <span class="ic">
+                <ion-icon name="mail-outline"></ion-icon>
+               </span>
+               <input type="email" required>
+               <label>Email</label>
+            </div>-->
+
+            <div class="input-box">
+              <span class="ic"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+               <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">Remember me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn1">Login</button>
+            <div class="login-register">
+              <p>Don't have an Account?<a href="#" class="register-link">Register</a></p>
+
+            </div>
+          </form>
+         </div>
+ 
+         <div class="form-box register">
+          <h2>Registraton</h2>
+          <form action="#">
+            <div class="input-box">
+               <span class="ic"><ion-icon name="person"></ion-icon></span>
+               <input type="text"  required>
+               <label>UserName</label><br/>
+               
+            </div>
+
+            <div class="input-box">
+               <span class="ic">
+                <ion-icon name="mail-outline"></ion-icon>
+               </span>
+               <input type="email" required>
+               <label>Email</label>
+            </div>
+
+            <div class="input-box">
+              <span class="ic"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+               <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">Agree to the term & conditions</label>
+              
+            </div>
+            <button type="submit" class="btn1">Register</button>
+            <div class="login-register">
+              <p>already have an Account?<a href="#" class="login-link">Login</a></p>
+
+            </div>
+          </form>
+         </div>
+      </div>
+      
+      <script src="app.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+      </script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+      </script>
+
+
+
+
+
+
+
+  </body>
+</html>
